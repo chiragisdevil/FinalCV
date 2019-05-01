@@ -1,0 +1,196 @@
+/* Padding , Border, and Margin */
+/* Display property in css:
+a) block (Apply to paragraphs<p>, headings<h1>, Divisions <div>, Lists <ol> <ul> <li> and forms <form>) - This is full screen length i.e. blocking the entire screen
+b) inline (Apply to image, span and anchror) - This is limited width and not the entire screen length. However, doesn't allow changing the width
+c) inline-block - Simillar to inline, but also allow to change the width (Usually images)
+d) none - Gets rid of the element (Used for hidden element. Eg, quiz where the element is not present and can be made to appear). This will also remove the position on the screen unlike visibility property
+*/
+/*Position property can be used to change the default positioning of the elements. They have the following types:
+a) Static - This is defaul HTML positioning that gives actual position by default i.e. default if no css is used
+b) Relative - Eg. position: relative; left:30px; --> This will push the image to the right by 30px (Relative to left, give a margin of 30px)
+    Coordinates for relative can be left (shift to right), right (shift to left), top (shift below) and bottom (Shift up)
+c) Absolute - This is a relative position to the parent element (Eg. if there is a image inside a Div, then position: absolute; right: 30px; will be 30px to left from the end of screen, as div spans width of the screen)
+Imp: Absolute postion changes layout i.e. if you move one div with absolute pos, then images below it will move up (In relative pos, other elements don't move)
+d) Fixed - By making fixed positioning, the element will stay in its position when the website is scrolled down.
+*/
+.top-container {
+  background-color: #EAF6F6;
+  position: relative;
+  padding-top: 100px;
+  /*  padding: 20px;
+  align-content: center;
+  align-items: center;
+  border: solid 10px;*/
+}
+img{
+  border-radius: 50%;
+  border-color: black;
+}
+
+body {
+  /* One way of centering text is using text-align property as center*/
+  text-align: center;
+  margin-top: 0;
+  margin-left: 0;
+  font-family: 'Merriweather', serif;
+  color: #40514E;
+  /*  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif*/
+  /* web safe fonts prevent fonts to rendered across OS. check https://www.cssfontstack.com/ . syntax is font name followed by serif/sans-serif*/
+  /*font-family: arial, sans-serif;*/
+}
+
+.Intro {
+  font-family: 'Sacramento', cursive;
+  line-height: 200%;
+  /*width: 50%;*/
+  /* If width is set to element, text-align centering does not work. In this scenario setting a margin for top, right, bottom, left(clockwise) works. auto makes it centered*/
+  /* margin: 0 auto 0 auto;*/
+}
+
+.bottom-cloud {
+  position: absolute;
+  left: 400px;
+  bottom: 300px;
+}
+
+.top-cloud {
+  position: absolute;
+  right: 400px;
+  top: 100px;
+}
+
+/*.middle-container {
+  background-color: red;
+  color: red;
+  height: 200px;
+  width: 200px;
+  padding: 20px;
+}
+
+.bottom-container {
+  color: blue;
+  background-color: blue;
+  height: 200px;
+  width: 200px;
+  padding: 20px;
+}*/
+.it {
+  text-decoration: underline;
+  /* Visibility hides the text, but unlike display=none property, it will leave the box where the text was as-is. i.e. we will see space here*/
+  /*visibility: hidden;*/
+}
+
+.mountain {
+  margin-top: 25px;
+}
+
+h1 {
+  font-size: 562.5%;
+  /*100% is 16px is 1em. So, if we want 90px, then it will be 90/16*100% i.e. 562.5% i.e 5.625em. Better to use percentage since some browser allow to minimize font size. Having static size will not lower the font size if small is chosen in chrom =e instead of medium*/
+  /* em and % have a risk. They are applied over the parent (Eg. if body has 200% & then h1 has 200%, then overall it becomes 400%. Hence, recommended to use 'rem' instead of em and %. rem doesn't care about parent font sizing)*/
+  margin: 60px auto 0 auto;
+  color: #66BFBF;
+}
+
+h2 {
+  color: #66BFBF;
+  font-size: 2em;
+}
+
+h3 {
+  color: #11999E;
+}
+
+.intro-description {
+  font-size: 2.5rem;
+  /*40px is required. 16px = 1rem. So, 40px = 2.5rem*/
+  margin-top: 20px;
+  color: #66BFBF;
+  font-weight: normal;
+}
+
+.skill-row {
+  width: 50%;
+  height: 200%;
+  margin: 100px auto 100px auto;
+  line-height: 2;
+  text-align: left;
+}
+/* Float property is used to wrap the text around an image for example i.e. it will be wrapped around the image */
+/*Clear property is the opposite of float and will clear the floating property whenever the clear property is applied */
+.skill-img1{
+  border-radius: 50%;
+  border-color: black;
+  border-width: medium;
+  float: left;
+  width: 25%;
+  margin-right: 30px;
+}
+.skill-img2{
+  border-radius: 50%;
+  border-color: black;
+  float: right;
+  width: 25%;
+  margin-left: 30px;
+}
+hr{
+  border-style: none;
+  border-top-style: dotted;
+  border-width: thick;
+  width: 49px;
+  margin-top: 50px;
+  color: #364f6b;
+}
+.middle-intro{
+  display: inline-block;
+  width: 35% ;
+  position: relative;
+  left: 0.5em;
+  margin-bottom: 50px;
+}
+
+.skills{
+  margin-top: 75px;
+}
+
+.bottom-container{
+
+  margin-top: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color:#66BFBF;
+}
+
+.footer-link{
+  color: #364f6b;
+  font-style: normal;
+  padding-right: 2em;
+  text-decoration: none;
+}
+
+.bookmark{
+  color: #EAF6F6;
+  font-size: 11px;
+}
+
+.butn {
+  -webkit-border-radius: 7;
+  -moz-border-radius: 7;
+  border-radius: 7px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  background: #11999E;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.butn:hover {
+  background: #11999E;
+  background-image: -webkit-linear-gradient(top, #11999E, #3498db);
+  background-image: -moz-linear-gradient(top, #11999E, #3498db);
+  background-image: -ms-linear-gradient(top, #11999E, #3498db);
+  background-image: -o-linear-gradient(top, #11999E, #3498db);
+  background-image: linear-gradient(to bottom, #11999E, #3498db);
+  text-decoration: none;
+}
