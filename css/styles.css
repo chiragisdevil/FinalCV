@@ -94,11 +94,12 @@ h1 {
 
 h2 {
   color: #66BFBF;
-  font-size: 2em;
+  font-size: 2rem;
 }
 
 h3 {
   color: #11999E;
+  font-size: 1rem;
 }
 
 .intro-description {
